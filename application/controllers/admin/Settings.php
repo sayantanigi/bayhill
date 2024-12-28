@@ -31,8 +31,10 @@ class Settings extends CI_Controller {
                 'facebook' => $this->testInput($this->input->post('facebook')),
                 'twitter' => $this->testInput($this->input->post('twitter')),
                 'linkedin' => $this->testInput($this->input->post('linkedin')),
-                //'instagram' => $this->testInput($this->input->post('instagram')),
-                //'youtube' => $this->testInput($this->input->post('youtube')),
+                'smtp_host' => $this->testInput($this->input->post('smtp_host')),
+                'smtp_port' => $this->testInput($this->input->post('smtp_port')),
+                'smtp_email' => $this->testInput($this->input->post('smtp_email')),
+                'smtp_pass' => base64_encode($this->input->post('smtp_pass'))
             );
             $where = array('settingId' => '1');
             if (!$this->Adminmodel->update($mydata, 'settings', $where)) {

@@ -50,10 +50,10 @@
 
                     <nav class="main-header__nav main-menu">
                         <ul class="main-menu__list">
-                            <li> <a href="#" class="active">In-Car Driving Lessons</a> </li>
-                            <li> <a href="#">Drivers Ed</a> </li>
-                            <li> <a href="#">FAQ</a> </li>
-                            <li> <a href="#">Contact</a> </li>
+                            <li> <a href="index.html" class="active">In-Car Driving Lessons</a> </li>
+                            <li> <a href="drivers-ed.html">Drivers Ed</a> </li>
+                            <li> <a href="faq.html">FAQ</a> </li>
+                            <li> <a href="contact-us.html">Contact</a> </li>
                         </ul>
                         <div class="mobile-nav__btn mobile-nav__toggler">
                             <span></span>
@@ -100,10 +100,10 @@
                                     <div class="col-lg-6">
                                         <div class="input-group mb-3">
                                             <span class="input-group-text"><img src="assets/images/icon/car-icon.png"/></span>
-                                            <select class="form-control form-select">
+                                            <select class="form-control form-select" id="drivinglesson">
                                                 <option>Driving Lessons</option>
-                                                <option>Lessons for Teen Classes</option>
-                                                <option>Lessons for Adult Classes</option>
+                                                <option value="teenclasses">Lessons for Teen Classes</option>
+                                                <option value="adultclasses">Lessons for Adult Classes</option>
                                             </select>
                                         </div>
                                     </div>
@@ -123,7 +123,24 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="modal fade" id="lessonsModal" tabindex="-1" aria-labelledby="lessonsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body py-4">
+                        <div class="text-center mb-4">
+                            <h2 class="h2 fw-bold">Lessons for Teen Classes</h2>
+                            <p>Enter your zip code to locate nearby courses</p>
+                        </div>
+                        <form action="courses.html">
+                            <div class="d-flex zipsearch mb-3 mx-auto">
+                                <input type="text" placeholder="Enter ZIP Code">
+                                <button class="flex-fill">Search by ZIP Code</button>
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </section>
         <section class="howitworkspnl">
             <div class="container">
@@ -269,7 +286,7 @@
                                 <p>Classes per Week: <span>3</span></p>
                                 <p>Price: <span>$ 500</span></p>
                                 <div class="mt-3">
-                                    <a href="#" class="enrollbtn">Enroll Now</a>
+                                    <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
                                 </div>
                             </div>
                             <div class="courseImg">
@@ -286,7 +303,7 @@
                                 <p>Classes per Week: <span>3</span></p>
                                 <p>Price: <span>$ 500</span></p>
                                 <div class="mt-3">
-                                    <a href="#" class="enrollbtn">Enroll Now</a>
+                                    <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
                                 </div>
                             </div>
                             <div class="courseImg">
@@ -303,7 +320,7 @@
                                 <p>Classes per Week: <span>3</span></p>
                                 <p>Price: <span>$ 500</span></p>
                                 <div class="mt-3">
-                                    <a href="#" class="enrollbtn">Enroll Now</a>
+                                    <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
                                 </div>
                             </div>
                             <div class="courseImg">
@@ -320,7 +337,7 @@
                                 <p>Classes per Week: <span>3</span></p>
                                 <p>Price: <span>$ 500</span></p>
                                 <div class="mt-3">
-                                    <a href="#" class="enrollbtn">Enroll Now</a>
+                                    <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
                                 </div>
                             </div>
                             <div class="courseImg">
@@ -337,7 +354,7 @@
                                 <p>Classes per Week: <span>3</span></p>
                                 <p>Price: <span>$ 500</span></p>
                                 <div class="mt-3">
-                                    <a href="#" class="enrollbtn">Enroll Now</a>
+                                    <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
                                 </div>
                             </div>
                             <div class="courseImg">
@@ -354,7 +371,7 @@
                                 <p>Classes per Week: <span>3</span></p>
                                 <p>Price: <span>$ 500</span></p>
                                 <div class="mt-3">
-                                    <a href="#" class="enrollbtn">Enroll Now</a>
+                                    <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
                                 </div>
                             </div>
                             <div class="courseImg">
@@ -587,6 +604,11 @@
 
                 fixedContentPos: false
             });
+        });
+        document.getElementById('drivinglesson').addEventListener('change', function () {
+            if (this.value === 'teenclasses') {
+                $('#lessonsModal').modal('show');
+            }
         });
     </script>
 </body>

@@ -16527,7 +16527,293 @@ body.boxed-wrapper .contact-two__left__shape {
 .yelplogo{
   width: 100%;
 }
+.enrollPnl{
+  padding: 80px 0;
+}
+.enrollPnl .form-control{
+  min-height: 48px;
+  background-color: #fff;
+  border: 0;
+  border-bottom: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #0000000f;
+  font-size: 14px;
+}
+.enrollPnl textarea.form-control{
+  min-height: 120px;
+}
+.form-check-success .form-check-input{
+  height: 16px;
+}
+.form-check-success .form-check-input:checked{
+  background-color: #009000;
+  border-color: #009000;
+}
+.enrollPnl .enrollbtn{
+  min-width: 200px;
+  font-size: 16px;
+  height: 50px;
+  border: 0;
+}
+.paytable tr td{
+  border-bottom: 0;
+  padding: 12px 6px;
+}
 
+.boxDateSchdule{
+  border-radius: 20px;
+  box-shadow: 0 2rem 4rem #00000026;
+  overflow: hidden;
+}
+.boxoutput{
+  box-shadow: 0 2rem 4rem #00000014;
+}
+#calendar-container {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+#calendar {
+  width: 100%;
+}
+
+.month-year-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.day-names, .days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+.day-names div{
+  padding: 10px 2px;
+  text-align: right;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+ .days-grid div {
+  padding: 10px;
+  min-height: 64px;
+  line-height: 1.2;
+  text-align: right;
+  font-size: 12px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.available {
+  background-color: #d4edda;
+  cursor: pointer;
+}
+
+.disabled, .blocked {
+  background-color: #f5f6fa;
+  cursor: not-allowed;
+}
+
+.blocked {
+  background-color: #f0d0d0;
+}
+
+.today {
+  border: 2px solid #0097e8;
+}
+.month-year-header span{
+  font-weight: 600;
+}
+.month-year-header button {
+  background: #f5f6fa;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #F79217;
+  font-size: 13px;
+}
+#slots {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  margin-top: 20px;
+}
+#slots label{
+  margin: 0;
+  border-radius: 10px;
+}
+#slots label span {
+  padding: 20px 10px;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+#slots .available {
+  background-color: #d4edda;
+  cursor: pointer;
+}
+#slots .available input, #slots .unavailable input{
+ display: none;
+}
+#slots .unavailable {
+  background-color: #f0d0d0;
+}
+
+#selected-date {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#slots input[type="radio"] {
+  /* position: absolute;
+  top: 5px;
+  left: 5px; */
+  cursor: pointer;
+}
+#slots label span{
+  display: block;
+}
+#back-to-calendar {
+  font-size: 14px;
+  cursor: pointer;
+}
+.sloatsInfo{
+  padding: 0;
+  margin-left: 0;
+}
+.sloatsInfo li{
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.sloatsInfo li span{
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 6px;
+  
+}
+.selectTime.sortingform select{
+  width: 280px;
+  font-size: 13px;
+  min-height: 40px;
+}
+.selectTime.sortingform select option{
+  font-size: 12px;
+}
+.bookingBox{
+  overflow: hidden;
+  box-shadow: 0 5px 25px #00000012;
+  border-radius: 10px;
+}
+.bookingBox .boxInfo{
+  padding: 10px 10px;
+}
+.iconBook{
+  margin-right: 5px;
+  height: 100%;
+  text-align: center;
+  background: #014599;
+  color: #fff;
+  font-size: 25px;
+  padding: 26px 10px;
+  min-width: 65px;
+}
+.iconBook img{
+  height: 26px;
+  width: 26px;
+  object-fit: contain;
+}
+.bookingBox h3{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #014599  ;
+}
+.bookingBox h4{
+  font-size: 13px;
+  color: #8f8f8f;
+  font-weight: 500;
+  margin: 0;
+}
+.thankyoubox p{
+  font-size: 14px;
+  text-align: justify;
+  color: #666;
+}
+.detailsForm .form-control{
+  background-color: #fff;
+  box-shadow: 0 3px 20px #0000000f;
+  border-bottom: 2px solid #0097E8;
+  border-radius: 10px;
+}
+.detailsForm .form-select{
+  box-shadow: 0 3px 20px #0000000f;
+  border-bottom: 2px solid #0097E8;
+  border-radius: 10px;
+}
+.detailsForm label{
+  font-weight: 500;
+}
+.contactPnl{
+  padding: 80px 0;
+}
+.contactInfobox {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  padding: 15px;
+  box-shadow: 0 10px 25px #0000000f;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: #fff;
+}
+.boxIconcontact {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 20px;
+  background: #014599;
+}
+.innerBanner{
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 120px 0;
+  background-position: center;
+}
+.innerBanner .title{
+  font-size: 44px;
+  font-weight: 600;
+}
+.faqpnl{
+  padding: 80px 0;
+}
+.faqpnl .accordion-item{
+  margin-bottom: 20px;
+  border: 0;
+  box-shadow: 0 5px 15px #00000012;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.faqpnl .accordion-item .accordion-button{
+  font-weight: 600;
+  padding: 22px;
+  font-size: 18px;
+}
 @media(max-width:991px){
   .main-header--three{
     padding: 10px 0;

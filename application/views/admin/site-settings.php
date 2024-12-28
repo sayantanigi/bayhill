@@ -68,6 +68,41 @@
                                     </div>
                                 </div>
                                 <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">SMTP Settings</h4>
+                                <hr>
+                                <div class="row mb-3 mt-3">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">SMTP HOST :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="smtp_host" id="smtp_host" value="<?= $data->smtp_host ?>" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">SMTP PORT :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="smtp_port" id="smtp_port" value="<?= $data->smtp_port ?>" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">SMTP User Email :</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" name="smtp_email" id="smtp_email" value="<?= $data->smtp_email ?>" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="example-text-input" class="col-sm-2 col-form-label">SMTP Password :</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" name="smtp_pass" id="smtp_pass" value="<?= $data->smtp_pass ?>" autocomplete="off">
+                                    </div>
+                                </div>
+                                <hr>
                                 <div class="row mb-3">
                                     <div class="col-sm-4 col-sm-offset-4">
                                         <div class="form-group">

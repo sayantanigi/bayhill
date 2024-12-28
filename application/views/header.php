@@ -41,10 +41,10 @@
                     </div>
                     <nav class="main-header__nav main-menu">
                         <ul class="main-menu__list">
-                            <li> <a href="#" class="active">In-Car Driving Lessons</a> </li>
-                            <li> <a href="#">Drivers Ed</a> </li>
-                            <li> <a href="#">FAQ</a> </li>
-                            <li> <a href="#">Contact</a> </li>
+                            <li><a href="<?= base_url() ?>" class="<?= (current_url() == base_url()) ? 'active' : '' ?>">In-Car Driving Lessons</a></li>
+                            <li><a href="<?= base_url('drivers-ed') ?>" class="<?= (current_url() == base_url('drivers-ed')) ? 'active' : '' ?>">Drivers Ed</a></li>
+                            <li><a href="<?= base_url('faq') ?>" class="<?= (current_url() == base_url('faq')) ? 'active' : '' ?>">FAQ</a></li>
+                            <li><a href="<?= base_url('contact') ?>" class="<?= (current_url() == base_url('contact')) ? 'active' : '' ?>">Contact</a></li>
                         </ul>
                         <div class="mobile-nav__btn mobile-nav__toggler">
                             <span></span>
