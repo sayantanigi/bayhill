@@ -65,6 +65,19 @@
                     </li>
                 </ul>
             </li>
+            <li class="<?= (!empty($subpage) && $subpage == 'contact_list')? 'mm-active' : ''; ?>">
+                <a href="javascript: void(0);" class="has-arrow waves-effect <?= (!empty($page) && $page == 'contact')? 'mm-active' : ''; ?>">
+                   <i class="fa fa-bookmark"></i>
+                   <span>Manage Contact</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li class="<?= (!empty($page) && $page == 'Contact')? 'mm-active' : ''; ?>">
+                        <a href="<?= base_url('admin/contact') ?>" class="<?= (!empty($subpage) && $subpage == 'contact')? 'active' : ''; ?>">
+                            <span class="hide-menu">Contact List</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
        </ul>
     </div>
 </div>

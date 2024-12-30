@@ -1,5 +1,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>    
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.js"></script>
 <style>
 .files:before,.profile .image,.text{text-align:center}
 small>p{color:red}
@@ -196,6 +198,19 @@ body{margin-top:20px}
 <link href='<?php echo base_url(); ?>assets/chosen/chosen.min.css' rel='stylesheet' type='text/css'>
 <script src='<?php echo base_url(); ?>assets/chosen/chosen.jquery.min.js' type='text/javascript'></script> 
 <script>
+$(document).ready(function() {
+    $('#course_description').summernote();
+    // Monitor changes to the editor
+    $('#course_description').on('summernote.change', function (we, contents, $editable) {
+        var plainText = $($('#course_description').summernote('code')).text();
+        if (plainText.trim()) {
+            $("#coursedescription").text(plainText);
+            $("#coursedesc_error").text("");
+        } else {
+            $("#coursedesc_error").text("Description cannot be empty.");
+        }
+    });
+});
 $(document).on('keyup', '#course_name', function (e) {
     var course_name = $(this).val();
     if (course_name) {
@@ -203,14 +218,6 @@ $(document).on('keyup', '#course_name', function (e) {
         $("#coursename").text(course_name);
     } else {
         $("#course_error").text('Please enter course name');
-    }
-});
-$(document).on('keyup', '#course_description', function (e) {
-    var desc = $(this).val();
-    if (desc) {
-        $("#coursedescription").text(desc);
-    } else {
-        $("#coursedesc_error").text();
     }
 });
 $(document).on('keyup', '#course_week', function (e) {

@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 //frontend
 $route['drivers-ed'] = 'home/drivers_ed';
+$route['student_form'] = 'home/student_form';
 $route['faq'] = 'home/faq';
 $route['contact'] = 'home/contact_us';
 $route['contact_store'] = 'home/contact_store';

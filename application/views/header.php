@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="<?= base_url()?>assets/vendors/owl-carousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url()?>assets/vendors/owl-carousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?= base_url()?>assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body class="custom-cursor">
     <div class="custom-cursor__cursor"></div>

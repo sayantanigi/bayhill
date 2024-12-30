@@ -1,19 +1,18 @@
 <style>
-    small > p{
-        color:red;
-    }
-    small{
-        color:red;
-    }
-    p strong{
-        font-weight: 600 !important;
-        color: black !important;
-    }
-    .sa-confirm-button-container button{
-        background-color: #146c43 !important;
-        border-color: #146c43 !important;
-    }
-
+small > p{
+    color:red;
+}
+small{
+    color:red;
+}
+p strong{
+    font-weight: 600 !important;
+    color: black !important;
+}
+.sa-confirm-button-container button{
+    background-color: #146c43 !important;
+    border-color: #146c43 !important;
+}
 </style>
 <div class="main-content">
     <div class="page-content">

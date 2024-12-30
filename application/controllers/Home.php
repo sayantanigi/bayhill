@@ -1,5 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 class Home extends CI_Controller {
     public function __construct() {
         parent::__construct();
@@ -25,12 +30,23 @@ class Home extends CI_Controller {
         $this->load->view('frontend/drivers_ed');
         $this->load->view('footer');
     }
+    public function student_form(){
+        $data = array(
+            'title' => 'Bay Hill Driving School',
+            'page' => 'Student Information',
+            'subpage' => 'Student Information',
+        );
+        $this->load->view('header', $data);
+        $this->load->view('frontend/student_registration');
+        $this->load->view('footer');
+    }
     public function faq() {
         $data = array(
             'title' => 'Bay Hill Driving School',
             'page' => 'FAQ',
             'subpage' => 'faq',
         );
+        $data['faq_list'] = $this->db->query("SELECT * FROM faq WHERE status = '1'")->result();
         $this->load->view('header', $data);
         $this->load->view('frontend/faq');
         $this->load->view('footer');
