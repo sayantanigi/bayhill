@@ -16,16 +16,12 @@
     <div class="bannerform">
         <div class="container">
             <div class="bannercontent">
-                <div class="bnrtopbox">
-                    <p>No Hidden Charges</p>
-                    <h2><span>Register Now $24.99</span></h2>
-                </div>
                 <div class="boxcontent">
                     <h3>California Online Drivers Education</h3>
                     <p>DMV Approved Online Drivers ED License # E416</p>
                 </div>
                 <div class="bannerenroll mt-4">
-                    <form>
+                    <form action="student-information-form.html">
                         <div class="px-4">
                             <div class="d-flex align-items-center gap-3 mb-3">
                                 <div>
@@ -52,8 +48,7 @@
                                 <p class="mb-0">Fast Shipping of DMV Certificate</p>
                             </div>
                         </div>
-
-                        <button class="btnenroll mt-4">Enroll Now</button>
+                        <a href="https://driversedforyou.com/" target="_blank" class="btnenroll mt-4 btn py-0">Enroll Now</a>
                     </form>
                 </div>
             </div>
@@ -81,41 +76,34 @@
 <section class="howitworkspnl">
     <div class="container">
         <h2 class="subtitle  wow fadeInUp">How It Works?</h2>
-        <h3 class="maintitle mb-5  wow fadeInUp">" Since 2010 , our commitment to serving the Bay Area
-            community with diligence and dedication "</h3>
-
+        <h3 class="maintitle mb-5  wow fadeInUp">" Since 2010 , our commitment to serving the Bay Area community with diligence and dedication "</h3>
         <div class="row align-items-center ">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="500ms">
                 <div class="d-flex mb-4 gap-4 worksPnl">
                     <div>
-                        <img src="assets/images/icon/stearing.png"/>
+                        <img src="assets/images/icon/steering-wheel.png"/>
                     </div>
                     <div>
-                        <h5 class="fw-semibold">1. Ready to get behind the wheel?</h5>
-                        <p>Call us and we’ll help to schedule your lessons at desired
-                            date and time based on the availability, free pick-up
-                            and drop-off.</p>
+                        <h5 class="fw-semibold"> Ready to get behind the wheel?</h5>
+                        <p>Call us and we’ll help to schedule your lessons at desired date and time based on the availability, free pick-up and drop-off.</p>
                     </div>
                 </div>
                 <div class="d-flex mb-4 gap-4 worksPnl">
                     <div>
-                        <img src="assets/images/icon/car.png"/>
+                        <img src="assets/images/icon/driving.png"/>
                     </div>
                     <div>
-                        <h5 class="fw-semibold">2. Start Driving</h5>
-                        <p>Our driving school instructor will guide you through
-                            everything from starting the car to mastering vehicle
-                            control.</p>
+                        <h5 class="fw-semibold"> Start Driving</h5>
+                        <p>Our driving school instructor will guide you through everything from starting the car to mastering vehicle control.</p>
                     </div>
                 </div>
                 <div class="d-flex mb-1 gap-4 worksPnl">
                     <div>
-                        <img src="assets/images/icon/idcard.png"/>
+                        <img src="assets/images/icon/identity.png"/>
                     </div>
                     <div>
-                        <h5 class="fw-semibold">3. Now Get Your License</h5>
-                        <p>Pass the official driving exam and get your license. Be a
-                            safe and responsible driver after.</p>
+                        <h5 class="fw-semibold"> Now Get Your License</h5>
+                        <p>Pass the official driving exam and get your license. Be a safe and responsible driver after.</p>
                     </div>
                 </div>
             </div>
@@ -126,7 +114,6 @@
                         <span class="playicon"><i class="fas fa-play-circle"></i></span>
                     </a>
                 </div>
-
             </div>
         </div>
     </div>
@@ -144,175 +131,28 @@
                 <div class="servBox">
                     <img src="assets/images/serviceicon/serv-01.png"/>
                     <h2>Private One-On-One Lessons</h2>
-                    <p>We understand that our students or their families
-                        may have busy lifestyles, that's why we have no
-                        problem picking you up and dropping you off
-                        before and after each training session. This
-                        means that we can ensure you get the training
-                        you need, when you need it and put an end to
-                        missed lessons or rescheduling due to
-                        transportation issues.</p>
+                    <p>In order to provide our full attention to you, the student, we like our behind the wheel training sessions to consist of two people in the car. That means the instructor, and the student will be the only two present while training. This ensures full confidence in each student to ask any questions. This privacy also allows the student to learn at a pace they have set themselves.</p>
                 </div>
             </div>
             <div class="servblocksize  wow fadeInUp" style="background-image: url(./assets/images/serv-bg-02.jpg);">
                 <div class="servBox">
                     <img src="assets/images/serviceicon/serv-02.png"/>
                     <h2>Free Pickup and Drop Off</h2>
-                    <p>We understand that our students or their families
-                        may have busy lifestyles, that's why we have no
-                        problem picking you up and dropping you off
-                        before and after each training session. This
-                        means that we can ensure you get the training
-                        you need, when you need it and put an end to
-                        missed lessons or rescheduling due to
-                        transportation issues.</p>
+                    <p>We understand that our students or their families may have busy lifestyles, that's why we have no problem picking you up and dropping you off before and after each training session. This means that we can ensure you get the training you need, when you need it and put an end to missed lessons or rescheduling due to transportation issues.</p>
                 </div>
             </div>
             <div class="servblocksize  wow fadeInUp" style="background-image: url(./assets/images/serv-bg-03.jpg);">
                 <div class="servBox">
                     <img src="assets/images/serviceicon/serv-03.png"/>
                     <h2>Clean & Maintained Vehicles</h2>
-                    <p>We understand that our students or their families
-                        may have busy lifestyles, that's why we have no
-                        problem picking you up and dropping you off
-                        before and after each training session. This
-                        means that we can ensure you get the training
-                        you need, when you need it and put an end to
-                        missed lessons or rescheduling due to
-                        transportation issues.</p>
+                    <p>We chose the clean and newer as our training vehicles. They have great safety ratings which come in handy in the event of the student wanting to test those safety ratings. Our vehicles are always up to date on their regular maintenance schedules. We also feel a clean environment is a great one to learn in, so our vehicles are kept clean.</p>
                 </div>
             </div>
             <div class="servblocksize  wow fadeInUp" style="background-image: url(./assets/images/serv-bg-04.jpg);">
                 <div class="servBox">
                     <img src="assets/images/serviceicon/serv-04.png"/>
                     <h2>Experienced Instructors</h2>
-                    <p>We understand that our students or their families
-                        may have busy lifestyles, that's why we have no
-                        problem picking you up and dropping you off
-                        before and after each training session. This
-                        means that we can ensure you get the training
-                        you need, when you need it and put an end to
-                        missed lessons or rescheduling due to
-                        transportation issues.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="courseListpnl">
-    <div class="container">
-        <h2 class="subtitle  wow fadeInUp">Course List</h2>
-        <h3 class="maintitle mb-5  wow fadeInUp">Driving Course Details and Offerings</h3>
-
-        <div class=" wow fadeInUp">
-            <form>
-                <div class="d-flex zipsearch mb-5">
-                    <input type="text" placeholder="Enter ZIP Code"/>
-                    <button class="flex-fill">Search by ZIP Code</button>
-                </div>
-            </form>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-6  wow fadeInUp">
-                <div class="courseBlock">
-                    <div class="courseBlockcontent">
-                        <img src="assets/images/serviceicon/serv-01.png" class="courblockicon"/>
-                        <h2><a href="#">Course Name</a></h2>
-                        <p>Course Week: <span>4</span></p>
-                        <p>Classes per Week: <span>3</span></p>
-                        <p>Price: <span>$ 500</span></p>
-                        <div class="mt-3">
-                            <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
-                        </div>
-                    </div>
-                    <div class="courseImg">
-                        <img src="assets/images/serv-bg-01.jpg"/>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6  wow fadeInUp">
-                <div class="courseBlock">
-                    <div class="courseBlockcontent">
-                        <img src="assets/images/serviceicon/serv-01.png" class="courblockicon"/>
-                        <h2><a href="#">Course Name</a></h2>
-                        <p>Course Week: <span>4</span></p>
-                        <p>Classes per Week: <span>3</span></p>
-                        <p>Price: <span>$ 500</span></p>
-                        <div class="mt-3">
-                            <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
-                        </div>
-                    </div>
-                    <div class="courseImg">
-                        <img src="assets/images/serv-bg-02.jpg"/>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6  wow fadeInUp">
-                <div class="courseBlock">
-                    <div class="courseBlockcontent">
-                        <img src="assets/images/serviceicon/serv-01.png" class="courblockicon"/>
-                        <h2><a href="#">Course Name</a></h2>
-                        <p>Course Week: <span>4</span></p>
-                        <p>Classes per Week: <span>3</span></p>
-                        <p>Price: <span>$ 500</span></p>
-                        <div class="mt-3">
-                            <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
-                        </div>
-                    </div>
-                    <div class="courseImg">
-                        <img src="assets/images/serv-bg-03.jpg"/>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6  wow fadeInUp">
-                <div class="courseBlock">
-                    <div class="courseBlockcontent">
-                        <img src="assets/images/serviceicon/serv-01.png" class="courblockicon"/>
-                        <h2><a href="#">Course Name</a></h2>
-                        <p>Course Week: <span>4</span></p>
-                        <p>Classes per Week: <span>3</span></p>
-                        <p>Price: <span>$ 500</span></p>
-                        <div class="mt-3">
-                            <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
-                        </div>
-                    </div>
-                    <div class="courseImg">
-                        <img src="assets/images/serv-bg-04.jpg"/>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6  wow fadeInUp">
-                <div class="courseBlock">
-                    <div class="courseBlockcontent">
-                        <img src="assets/images/serviceicon/serv-01.png" class="courblockicon"/>
-                        <h2><a href="#">Course Name</a></h2>
-                        <p>Course Week: <span>4</span></p>
-                        <p>Classes per Week: <span>3</span></p>
-                        <p>Price: <span>$ 500</span></p>
-                        <div class="mt-3">
-                            <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
-                        </div>
-                    </div>
-                    <div class="courseImg">
-                        <img src="assets/images/serv-bg-05.jpg"/>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6  wow fadeInUp">
-                <div class="courseBlock">
-                    <div class="courseBlockcontent">
-                        <img src="assets/images/serviceicon/serv-01.png" class="courblockicon"/>
-                        <h2><a href="#">Course Name</a></h2>
-                        <p>Course Week: <span>4</span></p>
-                        <p>Classes per Week: <span>3</span></p>
-                        <p>Price: <span>$ 500</span></p>
-                        <div class="mt-3">
-                            <a href="student-information-form.html" class="enrollbtn">Enroll Now</a>
-                        </div>
-                    </div>
-                    <div class="courseImg">
-                        <img src="assets/images/serv-bg-06.jpg"/>
-                    </div>
+                    <p>Our instructors have not only been driving for years but training as well. Every instructor is certified and licensed by the DMV and has completed an intensive training course.</p>
                 </div>
             </div>
         </div>

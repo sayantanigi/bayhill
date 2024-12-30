@@ -61,7 +61,7 @@
                         <h2 class="h2 fw-bold">Lessons for Teen Classes</h2>
                         <p>Enter your zip code to locate nearby courses</p>
                     </div>
-                    <form action="courses.html">
+                    <form action="<?= base_url()?>courses" method="POST">
                         <div class="d-flex zipsearch mb-3 mx-auto">
                             <input type="text" placeholder="Enter ZIP Code">
                             <button class="flex-fill">Search by ZIP Code</button>

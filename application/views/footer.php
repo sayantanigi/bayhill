@@ -172,6 +172,116 @@ document.getElementById('drivinglesson').addEventListener('change', function () 
         $('#lessonsModal').modal('show');
     }
 });
+const slots = [
+    { time: '09:00 - 10:30 am', status: 'available' },
+    { time: '10:30 - 12:00 pm', status: 'available' },
+    { time: '12:00 - 01:30 pm', status: 'available' },
+    { time: '01:30 - 03:00 pm', status: 'available' },
+    { time: '03:00 - 04:30 pm', status: 'unavailable' },
+    { time: '04:30 - 06:00 pm', status: 'available' },
+    { time: '06:00 - 07:30 pm', status: 'available' },
+    { time: '07:30 - 09:00 pm', status: 'available' },
+    { time: '09:00 - 10:30 pm', status: 'available' }
+];
+
+let selectedSlot = null;
+
+$(function() {
+    const calendarElement = $('#calendar');
+    const today = new Date();
+    let selectedDate = null;
+
+    function renderCalendar(month, year) {
+        calendarElement.empty();
+        const firstDay = new Date(year, month).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        const monthYearHeader = $('<div></div>').addClass('month-year-header');
+        const prevButton = $('<button><i class="fas fa-chevron-left"></i></button>').click(() => {
+            if (month === 0) {
+                renderCalendar(11, year - 1);
+            } else {
+                renderCalendar(month - 1, year);
+            }
+        });
+        const nextButton = $('<button><i class="fas fa-chevron-right"></i></button>').click(() => {
+            if (month === 11) {
+                renderCalendar(0, year + 1);
+            } else {
+                renderCalendar(month + 1, year);
+            }
+        });
+        const monthYearText = $('<span></span>').text(`${new Date(year, month).toLocaleString('default', { month: 'long' })} ${year}`);
+
+        monthYearHeader.append(prevButton, monthYearText, nextButton);
+        calendarElement.append(monthYearHeader);
+
+        const dayNames = $('<div></div>').addClass('day-names');
+        ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].forEach(day => {
+            dayNames.append($('<div></div>').text(day));
+        });
+        calendarElement.append(dayNames);
+
+        const daysGrid = $('<div></div>').addClass('days-grid');
+        for (let i = 0; i < firstDay; i++) {
+            daysGrid.append($('<div></div>'));
+        }
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            const date = new Date(year, month, day);
+            let dayElement = $('<div></div>').text(day);
+
+            if (date < today.setHours(0, 0, 0, 0)) {
+                dayElement.addClass('disabled');
+            }else if (month === 5 && (day === 20 || day === 21)) {
+                dayElement.addClass('blocked');
+            } else {
+                dayElement.addClass('available');
+                dayElement.click(() => {
+                    selectedDate = date.toDateString();
+                    $('#selected-date').text(`Selected Date: ${selectedDate}`);
+                    $('#calendar-container').hide();
+                    $('#slot-container').show();
+                    renderSlots();
+                });
+            }
+
+            if (date.toDateString() === new Date().toDateString()) {
+                dayElement.addClass('today');
+            }
+            daysGrid.append(dayElement);
+        }
+        calendarElement.append(daysGrid);
+    }
+
+    function renderSlots() {
+        const slotsElement = $('#slots');
+        slotsElement.empty();
+        slots.forEach(slot => {
+            const slotElement = $('<label></label>').addClass(slot.status);
+            const radioButton = $('<input>')
+                .attr('type', 'radio')
+                .attr('name', 'slot')
+                .attr('disabled', slot.status === 'unavailable')
+                .change(() => selectSlot(slot.time));
+            const label = $('<span></span>').text(slot.time);
+            slotElement.append(radioButton, label);
+            slotsElement
+            .append(slotElement);
+        });
+    }
+
+    function selectSlot(time) {
+        selectedSlot = time;
+    }
+
+    $('#back-to-calendar').click(function() {
+        $('#slot-container').hide();
+        $('#calendar-container').show();
+    });
+
+    renderCalendar(today.getMonth(), today.getFullYear());
+});
 </script>
 </body>
 </html>

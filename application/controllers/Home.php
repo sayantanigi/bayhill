@@ -40,6 +40,36 @@ class Home extends CI_Controller {
         $this->load->view('frontend/student_registration');
         $this->load->view('footer');
     }
+    public function courses(){
+        $data = array(
+            'title' => 'Bay Hill Driving School',
+            'page' => 'Courses',
+            'subpage' => 'Courses',
+        );
+        $this->load->view('header', $data);
+        $this->load->view('frontend/courses');
+        $this->load->view('footer');
+    }
+    public function booking_slot(){
+        $data = array(
+            'title' => 'Bay Hill Driving School',
+            'page' => 'Booking Slot',
+            'subpage' => 'Booking Slot',
+        );
+        $this->load->view('header', $data);
+        $this->load->view('frontend/booking_slot');
+        $this->load->view('footer');
+    }
+    public function payment_details(){
+        $data = array(
+            'title' => 'Bay Hill Driving School',
+            'page' => 'Payment Details',
+            'subpage' => 'Payment Details',
+        );
+        $this->load->view('header', $data);
+        $this->load->view('frontend/payment_details');
+        $this->load->view('footer');
+    }
     public function faq() {
         $data = array(
             'title' => 'Bay Hill Driving School',

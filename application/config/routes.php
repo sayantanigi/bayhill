@@ -56,6 +56,9 @@ $route['translate_uri_dashes'] = FALSE;
 //frontend
 $route['drivers-ed'] = 'home/drivers_ed';
 $route['student_form'] = 'home/student_form';
+$route['courses'] = 'home/courses';
+$route['booking_slot'] = 'home/booking_slot';
+$route['payment_details'] = 'home/payment_details';
 $route['faq'] = 'home/faq';
 $route['contact'] = 'home/contact_us';
 $route['contact_store'] = 'home/contact_store';
