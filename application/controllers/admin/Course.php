@@ -40,7 +40,7 @@ class Course extends CI_Controller {
             $data = array(
                 'course_code' => random_int(100000, 999999),
                 'course_name' => strip_tags($this->input->post('course_name')),
-                'course_description' => strip_tags($this->input->post('course_description')),
+                'course_description' => htmlspecialchars($this->input->post('course_description')),
                 'address' => strip_tags($this->input->post('address')),
                 'latitude' => strip_tags($this->input->post('latitude')),
                 'longitude' => strip_tags($this->input->post('longitude')),
@@ -98,7 +98,7 @@ class Course extends CI_Controller {
             }
             $data = array(
                 'course_name' => strip_tags($this->input->post('course_name')),
-                'course_description' => strip_tags($this->input->post('course_description')),
+                'course_description' => htmlspecialchars($this->input->post('course_description')),
                 'address' => strip_tags($this->input->post('address')),
                 'latitude' => strip_tags($this->input->post('latitude')),
                 'longitude' => strip_tags($this->input->post('longitude')),

@@ -1,22 +1,4 @@
 <?php $site_setting = $this->db->query("select * from  settings")->row(); ?>
-<section class="downloadBox">
-    <div class="container">
-        <div class="downloadapp" style="background-image: url(./assets/images/appbg.png);">
-            <div class="appcontent  wow fadeInUp">
-                <p class="text-white mb-2">Get App</p>
-                <h3 class="text-white mb-4">Get our app right now</h3>
-                <div class="d-flex gap-3 align-items-center appicon">
-                    <div>
-                        <a href="#"><img src="assets/images/appstore.png"/></a>
-                    </div>
-                    <div>
-                        <a href="#"><img src="assets/images/google-play.png"/></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="yelpreview  wow fadeInUp">
     <div class="container">
         <div class="yelpBox">
@@ -31,11 +13,11 @@
                         their online driver education and get ready to earn your California Learner’s Permit. Find
                         our course now.</p>
                     <div class="mt-3">
-                        <a href="#" class="enrollbtn">Course FAQ</a>
+                        <a href="<?= base_url()?>faq" class="enrollbtn">Course FAQ</a>
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <img src="assets/images/yelp.png" class="yelplogo"/>
+                    <img src="<?= base_url()?>assets/images/yelp.png" class="yelplogo"/>
                 </div>
             </div>
         </div>

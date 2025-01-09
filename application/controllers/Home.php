@@ -30,25 +30,86 @@ class Home extends CI_Controller {
         $this->load->view('frontend/drivers_ed');
         $this->load->view('footer');
     }
-    public function student_form(){
+    public function student_form($course_id = false){
+        if ($this->input->server('REQUEST_METHOD') === 'POST') {
+            $course_id = $this->input->post('course_id');
+        }
+        $course_list = $this->db->query("SELECT * FROM courses WHERE status = '1' AND is_deleted = '1'")->result();
         $data = array(
             'title' => 'Bay Hill Driving School',
             'page' => 'Student Information',
             'subpage' => 'Student Information',
+            'course_id' => $course_id,
+            'course_list' => $course_list
         );
         $this->load->view('header', $data);
         $this->load->view('frontend/student_registration');
         $this->load->view('footer');
     }
-    public function courses(){
+    public function courses($pincode = false){
+        if ($this->input->server('REQUEST_METHOD') === 'POST') {
+            $pincode = $this->input->post('pincode');
+        }
+        if(!empty($pincode)){
+            $course_list = $this->db->query("SELECT * FROM courses WHERE pincode = '".$pincode."' AND status = '1' AND is_deleted = '1'")->result();
+        } else {
+            $course_list = $this->db->query("SELECT * FROM courses WHERE status = '1' AND is_deleted = '1'")->result();
+        }
         $data = array(
             'title' => 'Bay Hill Driving School',
             'page' => 'Courses',
             'subpage' => 'Courses',
+            'pincode' => $pincode,
+            'course_list' => $course_list
         );
         $this->load->view('header', $data);
         $this->load->view('frontend/courses');
         $this->load->view('footer');
+    }
+    public function search_course() {
+        if(!empty($_POST['pincode'])) {
+            $course_list = $this->db->query("SELECT * FROM courses WHERE pincode = '".$_POST['pincode']."' AND status = '1' AND is_deleted = '1'")->result();
+        } else {
+            $course_list = $this->db->query("SELECT * FROM courses WHERE status = '1' AND is_deleted = '1'")->result();
+        }
+        if(!empty($course_list)){
+            foreach ($course_list as $course) {
+                $decodedContent = htmlspecialchars_decode($course->course_description);
+                $cleanedContent = str_replace(['<ul>', '</ul>'], '', $decodedContent);?>
+                <div class="col-lg-4 col-md-6 wow fadeInUp"> 
+                    <div class="package-card">
+                        <div class="package-card__head">
+                            <div class="package-card__head__item">
+                                <span class="package-card__head__item__price"> <sub>$</sub><?= $course->course_price; ?></span>
+                                <div class="package-card__head__item__shape__one">
+                                    <svg width="90" height="95" viewBox="0 0 90 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M90 -0.000350952L0 69.6066L90 94.9996V-0.000350952Z" fill="" fill-opacity="0.06" />
+                                    </svg>
+                                </div>
+                                <div class="package-card__head__item__shape__two">
+                                    <svg width="60" height="64" viewBox="0 0 60 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.789585 63.2843L59.4571 16.7158L0.00060816 0.747339L0.789585 63.2843Z" fill="" fill-opacity="0.06" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="package-card__body">
+                            <h3 class="package-card__body__title"><?= $course->course_name; ?></h3>
+                            <div class="pt-3">
+                                <h5 class="h6 text-center mb-3 fw-bold text-primary">This Package Includes  </h5>
+                                <ul class="listBoxcourse"><?= $cleanedContent; ?></ul>
+                            </div>
+                            <form method="POST" action="<?= base_url() ?>student_form" class="package-card__body__btn text-center">
+                                <input type="hidden" name="course_id" value="<?= $course->id?>">
+                                <button type="submit" class="drivschol-btn w-100">Select Package</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <?php }
+        } else {
+            echo '<div class="col-lg-12 col-md-12 wow fadeInUp">No data found related to '.$_POST['pincode'].' zipcode.</div>';
+        }
     }
     public function booking_slot(){
         $data = array(

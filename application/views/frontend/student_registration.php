@@ -65,12 +65,17 @@
                     <input type="password" class="form-control" placeholder="Enter your confirm password"/>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <label class="mb-2">Course Type <span class="text-danger">*</span> </label>
+                    <label class="mb-2">Course Name <span class="text-danger">*</span> </label>
                     <select class="form-control form-select">
                         <option>Select course</option>
+                        <?php 
+                        if(!empty($course_list)){
+                        foreach($course_list as $course){ ?>
+                        <option value="<?= $course->id; ?>" <?php if($course->id === $course_id){echo "selected";}?>><?= $course->course_name; ?></option>
+                        <?php } } ?>
                     </select>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
+                <!-- <div class="col-lg-3 col-md-6 mb-4">
                     <label class="mb-2">Credit Card Type <span class="text-danger">*</span> </label>
                     <select class="form-control form-select">
                         <option>Select card type</option>
@@ -87,7 +92,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <label class="mb-2">Credit Card Security Code (cvv) <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" placeholder="Enter here"/>
-                </div>
+                </div>-->
                 <div class="col-lg-12 mb-4 d-lg-flex gap-5 mb-4">
                     <div class="form-check form-switch form-check-success">
                         <input class="form-check-input" type="checkbox" role="switch" id="disclaimer">

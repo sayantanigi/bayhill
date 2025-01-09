@@ -206,3 +206,21 @@
         </div>
     </div>
 </section>
+<section class="downloadBox">
+    <div class="container">
+        <div class="downloadapp" style="background-image: url(./assets/images/appbg.png);">
+            <div class="appcontent  wow fadeInUp">
+                <p class="text-white mb-2">Get App</p>
+                <h3 class="text-white mb-4">Get our app right now</h3>
+                <div class="d-flex gap-3 align-items-center appicon">
+                    <div>
+                        <a href="#"><img src="<?= base_url()?>assets/images/appstore.png"/></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="<?= base_url()?>assets/images/google-play.png"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

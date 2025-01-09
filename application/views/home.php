@@ -3,12 +3,12 @@
         <div class="owl-carousel owl-theme" id="bannerslide">
             <div class="item">
                 <div class="imgbox">
-                    <img src="assets/images/img-01.jpg"/>
+                    <img src="<?= base_url()?>assets/images/img-01.jpg"/>
                 </div>
             </div>
             <div class="item">
                 <div class="imgbox">
-                    <img src="assets/images/img-02.jpg"/>
+                    <img src="<?= base_url()?>assets/images/img-02.jpg"/>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
                         <div class="row px-4 formbanner">
                             <div class="col-lg-6">
                                 <div class="input-group mb-3">
-                                    <span class="input-group-text"><img src="assets/images/icon/car-icon.png"/></span>
+                                    <span class="input-group-text"><img src="<?= base_url()?>assets/images/icon/car-icon.png"/></span>
                                     <select class="form-control form-select" id="drivinglesson">
                                         <option value="">Driving Lessons</option>
                                         <option value="teenclasses">Lessons for Teen Classes</option>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="input-group mb-3">
-                                    <span class="input-group-text"><img src="assets/images/icon/graduate-cap.png"/></span>
+                                    <span class="input-group-text"><img src="<?= base_url()?>assets/images/icon/graduate-cap.png"/></span>
                                     <input type="text" class="form-control" placeholder="Drivers Ed">
                                 </div>
                             </div>
@@ -63,8 +63,8 @@
                     </div>
                     <form action="<?= base_url()?>courses" method="POST">
                         <div class="d-flex zipsearch mb-3 mx-auto">
-                            <input type="text" placeholder="Enter ZIP Code">
-                            <button class="flex-fill">Search by ZIP Code</button>
+                            <input type="text" placeholder="Enter ZIP Code" name="pincode" id="pincode" title="Please enter a valid ZIP code" required />
+                            <button class="flex-fill" type="submit">Search by ZIP Code</button>
                         </div>
                     </form>
                 </div>
@@ -80,7 +80,7 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="500ms">
                 <div class="d-flex mb-4 gap-4 worksPnl">
                     <div>
-                        <img src="assets/images/icon/steering-wheel.png"/>
+                        <img src="<?= base_url()?>assets/images/icon/steering-wheel.png"/>
                     </div>
                     <div>
                         <h5 class="fw-semibold"> Ready to get behind the wheel?</h5>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="d-flex mb-4 gap-4 worksPnl">
                     <div>
-                        <img src="assets/images/icon/driving.png"/>
+                        <img src="<?= base_url()?>assets/images/icon/driving.png"/>
                     </div>
                     <div>
                         <h5 class="fw-semibold"> Start Driving</h5>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="d-flex mb-1 gap-4 worksPnl">
                     <div>
-                        <img src="assets/images/icon/identity.png"/>
+                        <img src="<?= base_url()?>assets/images/icon/identity.png"/>
                     </div>
                     <div>
                         <h5 class="fw-semibold"> Now Get Your License</h5>
@@ -109,7 +109,7 @@
             <div class="col-lg-6">
                 <div class="videoBg position-relative wow fadeInRight" data-wow-delay="500ms">
                     <a href="https://www.youtube.com/watch?v=aMLNYwwNLPQ" class="popup-youtube">
-                        <img src="assets/images/videobg.png"/>
+                        <img src="<?= base_url()?>assets/images/videobg.png"/>
                         <span class="playicon"><i class="fas fa-play-circle"></i></span>
                     </a>
                 </div>
@@ -128,28 +128,28 @@
         <div class="servboxlist">
             <div class="servblocksize  wow fadeInUp"  style="background-image: url(./assets/images/serv-bg-01.jpg);">
                 <div class="servBox">
-                    <img src="assets/images/serviceicon/serv-01.png"/>
+                    <img src="<?= base_url()?>assets/images/serviceicon/serv-01.png"/>
                     <h2>Private One-On-One Lessons</h2>
                     <p>In order to provide our full attention to you, the student, we like our behind the wheel training sessions to consist of two people in the car. That means the instructor, and the student will be the only two present while training. This ensures full confidence in each student to ask any questions. This privacy also allows the student to learn at a pace they have set themselves.</p>
                 </div>
             </div>
             <div class="servblocksize  wow fadeInUp" style="background-image: url(./assets/images/serv-bg-02.jpg);">
                 <div class="servBox">
-                    <img src="assets/images/serviceicon/serv-02.png"/>
+                    <img src="<?= base_url()?>assets/images/serviceicon/serv-02.png"/>
                     <h2>Free Pickup and Drop Off</h2>
                     <p>We understand that our students or their families may have busy lifestyles, that's why we have no problem picking you up and dropping you off before and after each training session. This means that we can ensure you get the training you need, when you need it and put an end to missed lessons or rescheduling due to transportation issues.</p>
                 </div>
             </div>
             <div class="servblocksize  wow fadeInUp" style="background-image: url(./assets/images/serv-bg-03.jpg);">
                 <div class="servBox">
-                    <img src="assets/images/serviceicon/serv-03.png"/>
+                    <img src="<?= base_url()?>assets/images/serviceicon/serv-03.png"/>
                     <h2>Clean & Maintained Vehicles</h2>
                     <p>We chose the clean and newer as our training vehicles. They have great safety ratings which come in handy in the event of the student wanting to test those safety ratings. Our vehicles are always up to date on their regular maintenance schedules. We also feel a clean environment is a great one to learn in, so our vehicles are kept clean.</p>
                 </div>
             </div>
             <div class="servblocksize  wow fadeInUp" style="background-image: url(./assets/images/serv-bg-04.jpg);">
                 <div class="servBox">
-                    <img src="assets/images/serviceicon/serv-04.png"/>
+                    <img src="<?= base_url()?>assets/images/serviceicon/serv-04.png"/>
                     <h2>Experienced Instructors</h2>
                     <p>Our instructors have not only been driving for years but training as well. Every instructor is certified and licensed by the DMV and has completed an intensive training course.</p>
                 </div>
@@ -204,7 +204,24 @@
         </div>
     </div>
 </section>
-
+<section class="downloadBox">
+    <div class="container">
+        <div class="downloadapp" style="background-image: url(./assets/images/appbg.png);">
+            <div class="appcontent  wow fadeInUp">
+                <p class="text-white mb-2">Get App</p>
+                <h3 class="text-white mb-4">Get our app right now</h3>
+                <div class="d-flex gap-3 align-items-center appicon">
+                    <div>
+                        <a href="#"><img src="<?= base_url()?>assets/images/appstore.png"/></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="<?= base_url()?>assets/images/google-play.png"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <script>
 $('#enroll_now').click(function(){
     lesson_type = $('#drivinglesson').val();

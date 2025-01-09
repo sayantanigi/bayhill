@@ -217,7 +217,7 @@ $(document).on('keyup', '#course_name', function (e) {
         $("#c_name").text(course_name);
         $("#coursename").text(course_name);
     } else {
-        $("#course_error").text('Please enter course name');
+        //$("#course_error").text('Please enter course name').css("color", "red");
     }
 });
 $(document).on('keyup', '#course_week', function (e) {
