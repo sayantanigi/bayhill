@@ -40,8 +40,9 @@ $route['translate_uri_dashes'] = FALSE;
 
 //frontend
 $route['drivers-ed'] = 'home/drivers_ed';
-$route['student_form'] = 'home/student_form';
 $route['courses'] = 'home/courses';
+$route['student_form'] = 'home/student_form';
+$route['student_data_store'] = 'home/student_form_store';
 $route['booking_slot'] = 'home/booking_slot';
 $route['payment_details'] = 'home/payment_details';
 $route['faq'] = 'home/faq';

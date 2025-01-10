@@ -30,21 +30,80 @@ class Home extends CI_Controller {
         $this->load->view('frontend/drivers_ed');
         $this->load->view('footer');
     }
-    public function student_form($course_id = false){
+    public function student_form(){
         if ($this->input->server('REQUEST_METHOD') === 'POST') {
             $course_id = $this->input->post('course_id');
         }
         $course_list = $this->db->query("SELECT * FROM courses WHERE status = '1' AND is_deleted = '1'")->result();
+        $country_list = $this->db->query("SELECT * FROM countries WHERE flag = '1'")->result();
         $data = array(
             'title' => 'Bay Hill Driving School',
             'page' => 'Student Information',
             'subpage' => 'Student Information',
             'course_id' => $course_id,
-            'course_list' => $course_list
+            'course_list' => $course_list,
+            'country_list' => $country_list
         );
         $this->load->view('header', $data);
         $this->load->view('frontend/student_registration');
         $this->load->view('footer');
+    }
+    public function student_form_store() {
+        if ($this->input->server('REQUEST_METHOD') === 'POST') {
+            $user_data = array(
+                'unique_code' => strtotime(date('Y-m-d h:i:s')),
+                'user_type' => '1',
+                'first_name' => $this->input->post('first_name'),
+                'middle_name' => $this->input->post('middle_name'),
+                'last_name' => $this->input->post('last_name'),
+                'username' => $this->input->post('username'),
+                'dob' => $this->input->post('dob'),
+                'gender' => $this->input->post('gender'),
+                'email' => $this->input->post('email_adrs'),
+                'phone' => $this->input->post('phone_no'),
+                'password' => base64_encode($this->input->post('password')),
+                'address' => $this->input->post('address'),
+                'country' => $this->input->post('country'),
+                'state' => $this->input->post('state'),
+                'city' => $this->input->post('city'),
+                'zipcode' => $this->input->post('zip_code'),
+                'status' => '0',
+                'email_verify_status' => '0',
+                'created_at' => date('Y-m-d h:i:s')
+            );
+            $this->db->insert('users', $user_data);
+            $user_id = $this->db->insert_id();
+            $mailing_data = array(
+                'user_id' => $user_id,
+                'first_name' => $this->input->post('first_name'),
+                'middle_name' => $this->input->post('middle_name'),
+                'last_name' => $this->input->post('last_name'),
+                'phone_no' => $this->input->post('phone_no'),
+                'address' => $this->input->post('address'),
+                'country' => $this->input->post('country'),
+                'state' => $this->input->post('state'),
+                'city' => $this->input->post('city'),
+                'zip_code' => $this->input->post('zip_code')
+            );
+            $this->db->insert('mailing_address', $mailing_data);
+            $mailing_id = $this->db->insert_id();
+            if($this->input->post('address_toggle') === '1'){
+                $billing_data = array(
+                    'mailing_id' => $mailing_id,
+                    'bfirst_name' => $this->input->post('bfirst_name'),
+                    'bmiddle_name' => $this->input->post('bmiddle_name'),
+                    'blast_name' => $this->input->post('blast_name'),
+                    'bphone_no' => $this->input->post('bphone_no'),
+                    'baddress' => $this->input->post('baddress'),
+                    'bcountry' => $this->input->post('bcountry'),
+                    'bstate' => $this->input->post('bstate'),
+                    'bcity' => $this->input->post('bcity'),
+                    'bzip_code' => $this->input->post('bzip_code')
+                );
+            }
+            $this->db->insert('billing_address', $billing_data);
+            redirect('booking_slot');
+        }
     }
     public function courses($pincode = false){
         if ($this->input->server('REQUEST_METHOD') === 'POST') {
@@ -75,7 +134,7 @@ class Home extends CI_Controller {
         if(!empty($course_list)){
             foreach ($course_list as $course) {
                 $decodedContent = htmlspecialchars_decode($course->course_description);
-                $cleanedContent = str_replace(['<ul>', '</ul>'], '', $decodedContent);?>
+                $cleanedContent = str_replace(['<ul>', '</ul>'], '', $decodedContent); ?>
                 <div class="col-lg-4 col-md-6 wow fadeInUp"> 
                     <div class="package-card">
                         <div class="package-card__head">
@@ -110,6 +169,32 @@ class Home extends CI_Controller {
         } else {
             echo '<div class="col-lg-12 col-md-12 wow fadeInUp">No data found related to '.$_POST['pincode'].' zipcode.</div>';
         }
+    }
+    public function states_by_country() {
+        $country_id = $this->input->post('country_id');
+        $state_list = $this->db->query("SELECT * FROM states WHERE country_id = '".$country_id."'")->result();
+        if(!empty($state_list)) {
+            $html = "<option value=''>Select State</option>";
+            foreach ($state_list as $state) {
+                $html .= "<option value='".$state->id."'>".ucfirst($state->name)."</option>";
+            }
+        } else {
+            $html = '';
+        }
+        echo $html;
+    }
+    public function cities_by_state() {
+        $state_id = $this->input->post('state_id');
+        $cities_list = $this->db->query("SELECT * FROM cities WHERE state_id = '".$state_id."'")->result();
+        if(!empty($cities_list)) {
+            $html = "<option value=''>Select City</option>";
+            foreach ($cities_list as $city) {
+                $html .= "<option value='".$city->id."'>".ucfirst($city->name)."</option>";
+            }
+        } else {
+            $html = '';
+        }
+        echo $html;
     }
     public function booking_slot(){
         $data = array(
@@ -225,6 +310,15 @@ class Home extends CI_Controller {
             } else {
                 $data = array('result' => 'success', 'data' => "Thank you for your message. Our team will contact you soon!");
             }
+        }
+        echo json_encode($data); exit;
+    }
+    public function checkusername() {
+        $checkUserName = $this->db->query("SELECT * FROM users WHERE username LIKE '%".$this->input->post('username')."%'")->row();
+        if(!empty($checkUserName)) {
+            $data = array('result'=> 'error', 'data' => 'Username already exists');
+        } else {
+            $data = array('result'=> 'success', 'data' => 'Username is Available');
         }
         echo json_encode($data); exit;
     }
