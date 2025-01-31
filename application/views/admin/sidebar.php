@@ -52,6 +52,19 @@
                     </li>
                 </ul>
             </li>
+            <li class="<?= (!empty($subpage) && $subpage == 'student_list')? 'mm-active' : ''; ?>">
+                <a href="javascript: void(0);" class="has-arrow waves-effect <?= (!empty($page) && $page == 'student')? 'mm-active' : ''; ?>">
+                   <i class="fa fa-bookmark"></i>
+                   <span>Manage Student</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="true">
+                    <li class="<?= (!empty($page) && $page == 'Student')? 'mm-active' : ''; ?>">
+                        <a href="<?= base_url('admin/student') ?>" class="<?= (!empty($subpage) && $subpage == 'student')? 'active' : ''; ?>">
+                            <span class="hide-menu">Student List</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <li class="<?= (!empty($subpage) && $subpage == 'course_list')? 'mm-active' : ''; ?>">
                 <a href="javascript: void(0);" class="has-arrow waves-effect <?= (!empty($page) && $page == 'courses')? 'mm-active' : ''; ?>">
                    <i class="fa fa-bookmark"></i>

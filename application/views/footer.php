@@ -1,102 +1,129 @@
 <?php $site_setting = $this->db->query("select * from  settings")->row(); ?>
-<section class="yelpreview  wow fadeInUp">
-    <div class="container">
-        <div class="yelpBox">
-            <div class="row g-5 justify-content-between align-items-center">
-                <div class="col-lg-8">
-                    <h2 class="h5 mb-3">Why Take California Driver Ed With Us?</h2>
-                    <p>We help teens and families navigate through their first-time driver experience to ensure
-                        that it is stress, worry and speedbump free. Our courses can be completed on any mobile
-                        device and will automatically save your progress each time you log out. Join thousands
-                        of teens who chose First Time Driver for their online driver education and get ready to earn
-                        your California Learner’s Permit. Join thousands of teens who chose First Time Driver for
-                        their online driver education and get ready to earn your California Learner’s Permit. Find
-                        our course now.</p>
-                    <div class="mt-3">
-                        <a href="<?= base_url()?>faq" class="enrollbtn">Course FAQ</a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <img src="<?= base_url()?>assets/images/yelp.png" class="yelplogo"/>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <footer class="main-footer">
-    <div class="main-footer__top">
-        <div class="container">
-            <div class="main-footer__inner">
-                <a href="<?= base_url()?>" class="main-footer__inner-logo">
-                    <img src="<?= base_url('uploads/logos/' . @$site_setting->logo) ?>" width="174" alt="<?= @$site_setting->title?>">
-                </a>
-            </div>
-        </div>
-    </div>
     <div class="main-footer__middle">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-xl-2">
-                    <h3 class="footertitle">Helpful Stuff</h3>
-                    <div class="footer-widget">
-                        <div class="footer-widget--links">
-                            <ul class="list-unstyled footer-widget__links">
-                                <li><a href="#">DMV Useful Links</a></li>
-                                <li><a href="#">Register For Drivers Ed</a></li>
-                            </ul>
+                <div class="col-xl-5 order-xl-2">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6">
+                            <h3 class="footertitle">Helpful Stuff</h3>
+                            <div class="footer-widget">
+                                <div class="footer-widget--links">
+                                    <ul class="list-unstyled footer-widget__links">
+                                        <li><a href="#">DMV Useful Links</a></li>
+                                        <li><a href="#">Register For Drivers Ed</a></li>
+                                        <li><a href="#">Register For Driving School</a></li>
+                                        <li><a href="#">BayHill Traffic School</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <h3 class="footertitle">Quick Links</h3>
+                            <div class="footer-widget">
+                                <div class="footer-widget--links footer-widget--links2">
+                                    <ul class="list-unstyled footer-widget__links">
+                                        <li><a href="#">FAQ Drivers Ed</a></li>
+                                        <li><a href="#">FAQ Driving School</a></li>
+                                        <li><a href="#">In-Car Driving Lessons</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-12">
+                            <h3 class="footertitle">Get our app right now</h3>
+                            <div class="d-flex gap-3 align-items-center appicon">
+                                <div>
+                                    <a href="#"><img src="assets/images/appstore.png" /></a>
+                                </div>
+                                <div>
+                                    <a href="#"><img src="assets/images/google-play.png" /></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-xl-2">
-                    <h3 class="footertitle">Quick Links</h3>
-                    <div class="footer-widget">
-                        <div class="footer-widget--links footer-widget--links2">
-                            <ul class="list-unstyled footer-widget__links">
-                                <li><a href="#">FAQ Drivers Ed</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-5">
+                <div class="col-md-12 col-xl-7">
                     <h3 class="footertitle">Contact Us</h3>
                     <div class="footer-widget footer-widget__right">
-                        <div class="footer-widget--about">
-                            <ul class="list-unstyled footer-widget__info">
-                                <li> 
-                                    <i class="icon-telephone-call-1" aria-hidden="true"></i> 
-                                    <a href="#"><?= @$site_setting->phone?></a>
-                                </li>
-                                <li> 
-                                    <i class="icon-envelope" aria-hidden="true"></i> 
-                                    <a href="#"><?= @$site_setting->email?></a>
-                                </li>
-                                <li>
-                                    <i class="icon-map-pin" aria-hidden="true"></i>
-                                    <a href="#"><?= @$site_setting->address?></a>
-                                </li>
-                            </ul>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="footer-widget--about">
+                                    <ul class="list-unstyled footer-widget__info">
+                                        <li>
+                                            <i class="icon-map-pin" aria-hidden="true"></i>
+                                            <a href="#">3769 Peralta Blvd ,Suite # A, Fremont CA</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-telephone-call-1" aria-hidden="true"></i>
+                                            <a href="#">510-943-4301</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-envelope" aria-hidden="true"></i>
+                                            <a href="#">Info@bayhilldrivingschool.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="footer-widget--about">
+                                    <ul class="list-unstyled footer-widget__info">
+                                        <li>
+                                            <i class="icon-map-pin" aria-hidden="true"></i>
+                                            <a href="#">97 E Brokaw Rd , ,San Jose CA</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-telephone-call-1" aria-hidden="true"></i>
+                                            <a href="#">408-384-4458</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-envelope" aria-hidden="true"></i>
+                                            <a href="#">Info@bayhilldrivingschool.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="footer-widget--about">
+                                    <ul class="list-unstyled footer-widget__info">
+                                        <li>
+                                            <i class="icon-map-pin" aria-hidden="true"></i>
+                                            <a href="#">4457 Willow Rd, Pleasanton CA 94588</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-telephone-call-1" aria-hidden="true"></i>
+                                            <a href="#">925-464-2899</a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-envelope" aria-hidden="true"></i>
+                                            <a href="#">Info@bayhilldrivingschool.com</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <h3 class="footertitle">Social Network</h3>
+                                <div class="main-footer__inner-social">
+                                    <a href="https://facebook.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                    <a href="https://twitter.com/"><i class="icon-twitter" aria-hidden="true"></i></a>
+                                    <a href="https://pinterest.com/"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xl-3">
-                    <h3 class="footertitle">Social Network</h3>
-                    <div class="main-footer__inner-social">
-                        <a href="<?= $site_setting->facebook; ?>"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                        <a href="<?= $site_setting->twitter; ?>"><i class="icon-twitter" aria-hidden="true"></i></a>
-                        <a href="<?= $site_setting->linkedin; ?>"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="main-footer__bottom">
         <div class="container">
             <div class="main-footer__bottom__inner d-lg-flex align-items-center justify-content-between">
                 <div class="d-flex gap-4  order-lg-2 mb-3 mb-lg-0">
                     <a href="#" class="text-dark">Terms & Conditions</a>
-                    <a href="#" class="text-dark">Privacy Policy</a>
                 </div>
-                <p class="main-footer__copyright order-lg-1"> &copy; Copyright <span class="dynamic-year"></span> <?= @$site_setting->title?>. All Rights Reserved. Designed and Developed by <a href="" class="fw-semibold text-primary">GOIGI.COM</a></p>
+                <p class="main-footer__copyright order-lg-1"> &copy; Copyright <span class="dynamic-year"></span> BayHill. All Rights Reserved. Designed and Developed by <a href="" class="fw-semibold text-primary">GOIGI.COM</a></p>
             </div>
         </div>
     </div>
@@ -105,15 +132,18 @@
 <div class="mobile-nav__wrapper">
     <div class="mobile-nav__overlay mobile-nav__toggler"></div>
     <div class="mobile-nav__content">
-        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+        <span class="mobile-nav__close mobile-nav__toggler">
+            <i class="fa fa-times"></i>
+        </span>
         <div class="logo-box">
-            <a href="<?= base_url()?>" aria-label="logo image">
-                <img src="<?= base_url('uploads/logos/' . @$site_setting->logo) ?>" width="155" alt="<?= @$site_setting->title?>">
+            <a href="index.html" aria-label="logo image">
+                <img src="assets/images/logo.png" width="155" alt="logo drivschol">
             </a>
         </div>
         <div class="mobile-nav__container"></div>
     </div>
 </div>
+
 <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
     <span class="scroll-to-top__text">back top</span>
     <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>

@@ -15,7 +15,7 @@
                         <div class="col-md-6 col-xl-4">
                             <div class="card overflow-hidden card-h-100 custom-shadow rounded-lg border">
                                 <a href="<?= base_url('admin/trainer') ?>">
-                                    <?php $trainers = $this->Adminmodel->count('users', array('user_type' => 1)); ?>
+                                    <?php $trainers = $this->Adminmodel->count('users', array('user_type' => 2)); ?>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between">
                                             <h5 class="font-size-15 text-uppercase mb-0">Trainers</h5>
@@ -32,7 +32,8 @@
                             </div>
                         </div>
                         <div class="col-xl-4">
-                            <a href="<?= base_url('admin/students') ?>">
+                            <a href="<?= base_url('admin/student') ?>">
+                                <?php $students = $this->Adminmodel->count('users', array('user_type' => 1)); ?>
                                 <div class="card overflow-hidden card-h-100 custom-shadow rounded-lg border">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between">
@@ -43,7 +44,7 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <h3 class="font-size-24">0</h3>
+                                        <h3 class="font-size-24"><?= $students ?></h3>
                                     </div>
                                     <div id="completed-chart"></div>
                                 </div>

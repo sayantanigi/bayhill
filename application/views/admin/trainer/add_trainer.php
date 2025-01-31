@@ -86,12 +86,20 @@ body{margin-top:20px}
                                         </div>
                                         <small id="email_error"></small>
                                         <div class="form-group mb-2">
-                                            <label class="fw-semibold  text-black">Gender</label>
-                                            <select class="form-control" name="gender" id="gender">
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                                <option value="Other">Other</option>
-                                            </select>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="fw-semibold  text-black">Gender</label>
+                                                    <select class="form-control" name="gender" id="gender">
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="fw-semibold  text-black">DOB</label>
+                                                    <input type="date" class="form-control" name="dob" id="dob">
+                                                </div>
+                                            </div>
                                         </div>
                                         <small id="gender_error"></small>
                                         <div class="form-group mb-2">

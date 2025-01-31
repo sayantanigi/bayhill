@@ -71,20 +71,18 @@
                 <h3 class="maintitle mb-5  wow fadeInUp">Enter your payment information</h3>
                 <div class="row">
                     <div class="col-lg-6 mb-4">
-                        <div class="courseBlock mb-5">
-                            <div class="courseBlockcontent">
-                                <img src="assets/images/serviceicon/serv-01.png" class="courblockicon">
-                                <h2><a href="#">Course Name</a></h2>
-                                <p>Course Week: <span>4</span></p>
-                                <p>Classes per Week: <span>3</span></p>
-                                <p>Price: <span>$ 500</span></p>
-                            </div>
-                            <div class="courseImg">
-                                <img src="assets/images/serv-bg-01.jpg">
-                            </div>
-                        </div>
+                        
                         <div class="row justify-content-center">
                             <div class="col-lg-9">
+                                <div class="courseBlock mb-5">
+                                    <div class="courseBlockcontent w-100">
+                                        <img src="assets/images/serviceicon/serv-01.png" class="courblockicon">
+                                        <h2><a href="#">Course Name</a></h2>
+                                        <p>Course Week: <span>4</span></p>
+                                        <p>Classes per Week: <span>3</span></p>
+                                        <p>Price: <span>$ 500</span></p>
+                                    </div>
+                                </div>
                                 <table class="table paytable">
                                     <tbody>
                                         <tr>
@@ -105,30 +103,52 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mb-4">
-                        <div class="p-lg-5 p-4 shadow-lg rounded-4">
-                            <div class="row">
-                                <div class="col-lg-12 mb-4">
-                                    <label class="mb-2">Card Number</label>
-                                    <input type="text" class="form-control" placeholder="Card Number">
-                                </div>
-                                <div class="col-lg-6 col-md-6 mb-4">
-                                    <label class="mb-2">CVV</label>
-                                    <input type="text" class="form-control" placeholder="Enter CVV">
-                                </div>
-                                <div class="col-lg-6 col-md-6 mb-4">
-                                    <label class="mb-2">Expiry Date</label>
-                                    <input type="text" class="form-control" placeholder="MM/YYYY">
-                                </div>
-                                <div class="col-lg-12 mb-4">
-                                    <div class="form-check form-switch form-check-success">
-                                        <input class="form-check-input" type="checkbox" role="switch" id="terms">
-                                        <label class="form-check-label text-primary" for="terms">By proceeding, you confirm that you have read and agree to BayHill  Terms of Use and Privacy Notice.</label>
+                        <div class="p-lg-4 p-3 shadow-lg rounded-4">
+                            <form>
+                                <div class="row">
+                                    <div class="col-lg-12 mb-4">
+                                        <label class="mb-2">Card Number</label>
+                                        <input type="text" class="form-control" placeholder="Card Number">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 mb-4">
+                                        <label class="mb-2">CVV</label>
+                                        <input type="text" class="form-control" placeholder="Enter CVV">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 mb-4">
+                                        <label class="mb-2">Expiry Date</label>
+                                        <input type="text" class="form-control" placeholder="MM/YYYY">
+                                    </div>
+                                    <div class="col-lg-12 mb-4">
+                                        <div class="form-check form-switch form-check-success">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="terms">
+                                            <label class="form-check-label text-primary" for="terms">By proceeding, you confirm that you have read and agree to BayHill  Terms of Use and Privacy Notice.</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                        <button class="enrollbtn">Book for $ 500.00</button>
                                     </div>
                                 </div>
-                                <div class="col-lg-12 text-center">
-                                    <button class="enrollbtn">Book for $ 500.00</button>
+                            </form>
+                        </div>
+                        <div class="my-4 text-center">
+                            <span class="h6 text-muted">OR</span>
+                        </div>
+                        <div class="p-lg-4 p-3 shadow-lg rounded-4">
+                            <form>
+                                <h3 class="h5 text-center mb-4">Zelle Pay</h3>
+                                <div class="text-center mb-4">
+                                    <img src="assets/images/qr.png" height="190"/>
                                 </div>
-                            </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-12 mb-4">
+                                        <label class="mb-2">Put your payment reference code to proceed with the booking</label>
+                                        <input type="text" class="form-control" placeholder="Enter reference code">
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                        <button class="enrollbtn">Submit </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -161,62 +181,97 @@
             </div>
         </section>
         <footer class="main-footer">
-            <div class="main-footer__top">
-                <div class="container">
-                    <div class="main-footer__inner">
-                        <a href="index.html" class="main-footer__inner-logo">
-                            <img src="assets/images/logo.png" width="174" alt="Drivschol HTML Template">
-                        </a>
-                    </div>
-                </div>
-            </div>
             <div class="main-footer__middle">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-xl-2">
-                            <h3 class="footertitle">Helpful Stuff</h3>
-                            <div class="footer-widget">
-                                <div class="footer-widget--links">
-                                    <ul class="list-unstyled footer-widget__links">
-                                        <li><a href="#">DMV Useful Links</a></li>
-                                        <li><a href="#">Register For Drivers Ed</a></li>
-                                    </ul>
+                        <div class="col-xl-5 order-xl-2">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6">
+                                    <h3 class="footertitle">Helpful Stuff</h3>
+                                    <div class="footer-widget">
+                                        <div class="footer-widget--links">
+                                            <ul class="list-unstyled footer-widget__links">
+                                                <li><a href="#">DMV Useful Links</a></li>
+                                                <li><a href="#">Register For Drivers Ed</a></li>
+                                                <li><a href="#">Register For Driving School</a></li>
+                                                <li><a href="#">BayHill Traffic School</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <h3 class="footertitle">Quick Links</h3>
+                                    <div class="footer-widget">
+                                        <div class="footer-widget--links footer-widget--links2">
+                                            <ul class="list-unstyled footer-widget__links">
+                                                <li><a href="#">FAQ Drivers Ed</a></li>
+                                                <li><a href="#">FAQ Driving School</a></li>
+                                                <li><a href="#">In-Car Driving Lessons</a></li>
+                                                <li><a href="#">Contact Us</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-6 col-xl-2">
-                            <h3 class="footertitle">Quick Links</h3>
-                            <div class="footer-widget">
-                                <div class="footer-widget--links footer-widget--links2">
-                                    <ul class="list-unstyled footer-widget__links">
-                                        <li><a href="#">FAQ Drivers Ed</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-xl-5">
+                        <div class="col-md-12 col-xl-7">
                             <h3 class="footertitle">Contact Us</h3>
                             <div class="footer-widget footer-widget__right">
-                                <div class="footer-widget--about">
-                                    <ul class="list-unstyled footer-widget__info">
-                                        <li> <i class="icon-telephone-call-1" aria-hidden="true"></i> <a href="#">510-943-4301</a></li>
-                                        <li> <i class="icon-envelope" aria-hidden="true"></i> <a href="#">Info@bayhilldrivingschool.com</a></li>
-                                        <li> <i class="icon-map-pin" aria-hidden="true"></i> <a href="#">3769 Peralta Blvd ,Suite # A ,
-                                            Fremont CA</a></li>
-                                    </ul>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="footer-widget--about">
+                                            <ul class="list-unstyled footer-widget__info">
+                                                <li> <i class="icon-map-pin" aria-hidden="true"></i> <a href="#">3769 Peralta
+                                                    Blvd ,Suite # A ,
+                                                    Fremont CA</a></li>
+                                                <li> <i class="icon-telephone-call-1" aria-hidden="true"></i> <a
+                                                        href="#">510-943-4301</a></li>
+                                                <li> <i class="icon-envelope" aria-hidden="true"></i> <a
+                                                        href="#">Info@bayhilldrivingschool.com</a></li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="footer-widget--about">
+                                            <ul class="list-unstyled footer-widget__info">
+                                                <li> <i class="icon-map-pin" aria-hidden="true"></i> <a href="#">97 E Brokaw Rd , ,San Jose CA</a></li>
+                                                <li> <i class="icon-telephone-call-1" aria-hidden="true"></i> <a
+                                                        href="#">408-384-4458</a></li>
+                                                <li> <i class="icon-envelope" aria-hidden="true"></i> <a
+                                                        href="#">Info@bayhilldrivingschool.com</a></li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="footer-widget--about">
+                                            <ul class="list-unstyled footer-widget__info">
+                                                <li> <i class="icon-map-pin" aria-hidden="true"></i> <a href="#">4457 Willow Rd, Pleasanton CA 94588</a></li>
+                                                <li> <i class="icon-telephone-call-1" aria-hidden="true"></i> <a
+                                                        href="#">925-464-2899</a></li>
+                                                <li> <i class="icon-envelope" aria-hidden="true"></i> <a
+                                                        href="#">Info@bayhilldrivingschool.com</a></li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h3 class="footertitle">Social Network</h3>
+                                        <div class="main-footer__inner-social">
+                                            <a href="https://facebook.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                            <a href="https://twitter.com/"><i class="icon-twitter" aria-hidden="true"></i></a>
+                                            <a href="https://pinterest.com/"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
+                                        
                             </div>
+                            
                         </div>
-                        <div class="col-md-6 col-xl-3">
-                            <h3 class="footertitle">Social Network</h3>
-                            <div class="main-footer__inner-social">
-                                <a href="https://facebook.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                                <a href="https://twitter.com/"><i class="icon-twitter" aria-hidden="true"></i></a>
-                                <a href="https://pinterest.com/"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -224,12 +279,13 @@
             <div class="main-footer__bottom">
                 <div class="container">
                     <div class="main-footer__bottom__inner d-lg-flex align-items-center justify-content-between">
-                        
+
                         <div class="d-flex gap-4  order-lg-2 mb-3 mb-lg-0">
                             <a href="#" class="text-dark">Terms & Conditions</a>
-                            <a href="#" class="text-dark">Privacy Policy</a>
                         </div>
-                        <p class="main-footer__copyright order-lg-1"> &copy; Copyright <span class="dynamic-year"></span> BayHill. All Rights Reserved. Designed and Developed by <a href="" class="fw-semibold text-primary">GOIGI.COM</a></p>
+                        <p class="main-footer__copyright order-lg-1"> &copy; Copyright <span
+                                class="dynamic-year"></span> BayHill. All Rights Reserved. Designed and Developed by <a
+                                href="" class="fw-semibold text-primary">GOIGI.COM</a></p>
                     </div>
                 </div>
             </div>

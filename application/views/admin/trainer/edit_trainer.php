@@ -74,12 +74,12 @@ body{margin-top:20px}
                                         </div>
                                         <div class="form-group mb-2">
                                             <label class="fw-semibold  text-black">First Name *</label>
-                                            <input type="text" class="form-control" name="fname" id="fname" required autocomplete="off" value="<?= @$result->fname ?>">
+                                            <input type="text" class="form-control" name="fname" id="fname" required autocomplete="off" value="<?= @$result->first_name ?>">
                                         </div>
                                         <?php echo form_error('fname', '<small class="" style="color:red;">', '</small>'); ?>
                                         <div class="form-group mb-2">
                                             <label class="fw-semibold  text-black">Last Name *</label>
-                                            <input type="text" class="form-control" name="lname"  id="lname" required autocomplete="off" value="<?= @$result->lname ?>">
+                                            <input type="text" class="form-control" name="lname"  id="lname" required autocomplete="off" value="<?= @$result->last_name ?>">
                                         </div>
                                         <?php echo form_error('lname', '<small class="" style="color:red;">', '</small>'); ?>
                                         <div class="form-group mb-2">
@@ -88,12 +88,20 @@ body{margin-top:20px}
                                         </div>
                                         <?php echo form_error('email', '<small class="" style="color:red;">', '</small>'); ?>
                                         <div class="form-group mb-2">
-                                            <label class="fw-semibold  text-black">Gender</label>
-                                            <select class="form-control" name="gender" id="gender">
-                                                <option value="Male" <?php if(@$result->gender == 'Male'){echo "selected";}?>>Male</option>
-                                                <option value="Female" <?php if(@$result->gender == 'Female'){echo "selected";}?>>Female</option>
-                                                <option value="Other" <?php if(@$result->gender == 'Other'){echo "selected";}?>>Other</option>
-                                            </select>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <label class="fw-semibold text-black">Gender</label>
+                                                    <select class="form-control" name="gender" id="gender">
+                                                        <option value="Male" <?php if(@$result->gender == 'Male'){echo "selected";}?>>Male</option>
+                                                        <option value="Female" <?php if(@$result->gender == 'Female'){echo "selected";}?>>Female</option>
+                                                        <option value="Other" <?php if(@$result->gender == 'Other'){echo "selected";}?>>Other</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <label class="fw-semibold  text-black">DOB</label>
+                                                    <input type="date" class="form-control" name="dob" id="dob" value="<?= @$result->dob ?>">
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group mb-2">
                                             <label class="fw-semibold  text-black">Phone *</label>
@@ -208,12 +216,12 @@ body{margin-top:20px}
                                                     </div>
                                                     <div class="mt-3" style="margin-top: 5px !important;">
                                                         <div class="tx-11 font-weight-bold mb-0 ">
-                                                            <b>First Name: </b><p class="text-muted" id="first_name" style="display: contents"><?= @$result->fname; ?></p>
+                                                            <b>First Name: </b><p class="text-muted" id="first_name" style="display: contents"><?= @$result->first_name; ?></p>
                                                         </div>
                                                     </div>
                                                     <div class="mt-3" style="margin-top: 5px !important;">
                                                         <div class="tx-11 font-weight-bold mb-0 ">
-                                                            <b>Last Name: </b><p class="text-muted" id="last_name" style="display: contents"><?= @$result->lname; ?></p>
+                                                            <b>Last Name: </b><p class="text-muted" id="last_name" style="display: contents"><?= @$result->last_name; ?></p>
                                                         </div>
                                                     </div>
                                                     <div class="mt-3" style="margin-top: 5px !important;">

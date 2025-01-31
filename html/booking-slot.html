@@ -71,7 +71,7 @@
                 <h3 class="maintitle mb-5  wow fadeInUp">Plan your reservation based on<br/>
                     your preferences</h3>
                     <div class="boxDateSchdule">
-                        <form action="confirm-booking.html">
+                        <form action="payment-details.html">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="p-lg-5 p-3">
@@ -172,7 +172,15 @@
                                                 <li><span style="background-color: #f5f6fa;"></span> Expired slots</li>
                                             </ul>
                                         </div>
-                                        
+                                        <div id="slot-container" style="display: none;">
+                                            <div class="text-start"><a href="#" class="text-warning" id="back-to-calendar"><i class="fas fa-chevron-left me-1"></i> Back to Calendar</a></div>
+                                            <h5 class="h6" id="selected-date">Selected Date:</h5>
+                                            <div id="slots"></div>
+                                            <ul class="mt-30 sloatsInfo">
+                                                <li><span style="background-color: #d4edda;"></span> Available Time Slots</li>
+                                                <li><span style="background-color: #f0d0d0;"></span> No available slots</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -266,62 +274,97 @@
             </div>
         </section>
         <footer class="main-footer">
-            <div class="main-footer__top">
-                <div class="container">
-                    <div class="main-footer__inner">
-                        <a href="index.html" class="main-footer__inner-logo">
-                            <img src="assets/images/logo.png" width="174" alt="Drivschol HTML Template">
-                        </a>
-                    </div>
-                </div>
-            </div>
             <div class="main-footer__middle">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-xl-2">
-                            <h3 class="footertitle">Helpful Stuff</h3>
-                            <div class="footer-widget">
-                                <div class="footer-widget--links">
-                                    <ul class="list-unstyled footer-widget__links">
-                                        <li><a href="#">DMV Useful Links</a></li>
-                                        <li><a href="#">Register For Drivers Ed</a></li>
-                                    </ul>
+                        <div class="col-xl-5 order-xl-2">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6">
+                                    <h3 class="footertitle">Helpful Stuff</h3>
+                                    <div class="footer-widget">
+                                        <div class="footer-widget--links">
+                                            <ul class="list-unstyled footer-widget__links">
+                                                <li><a href="#">DMV Useful Links</a></li>
+                                                <li><a href="#">Register For Drivers Ed</a></li>
+                                                <li><a href="#">Register For Driving School</a></li>
+                                                <li><a href="#">BayHill Traffic School</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6">
+                                    <h3 class="footertitle">Quick Links</h3>
+                                    <div class="footer-widget">
+                                        <div class="footer-widget--links footer-widget--links2">
+                                            <ul class="list-unstyled footer-widget__links">
+                                                <li><a href="#">FAQ Drivers Ed</a></li>
+                                                <li><a href="#">FAQ Driving School</a></li>
+                                                <li><a href="#">In-Car Driving Lessons</a></li>
+                                                <li><a href="#">Contact Us</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-6 col-xl-2">
-                            <h3 class="footertitle">Quick Links</h3>
-                            <div class="footer-widget">
-                                <div class="footer-widget--links footer-widget--links2">
-                                    <ul class="list-unstyled footer-widget__links">
-                                        <li><a href="#">FAQ Drivers Ed</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-xl-5">
+                        <div class="col-md-12 col-xl-7">
                             <h3 class="footertitle">Contact Us</h3>
                             <div class="footer-widget footer-widget__right">
-                                <div class="footer-widget--about">
-                                    <ul class="list-unstyled footer-widget__info">
-                                        <li> <i class="icon-telephone-call-1" aria-hidden="true"></i> <a href="#">510-943-4301</a></li>
-                                        <li> <i class="icon-envelope" aria-hidden="true"></i> <a href="#">Info@bayhilldrivingschool.com</a></li>
-                                        <li> <i class="icon-map-pin" aria-hidden="true"></i> <a href="#">3769 Peralta Blvd ,Suite # A ,
-                                            Fremont CA</a></li>
-                                    </ul>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="footer-widget--about">
+                                            <ul class="list-unstyled footer-widget__info">
+                                                <li> <i class="icon-map-pin" aria-hidden="true"></i> <a href="#">3769 Peralta
+                                                    Blvd ,Suite # A ,
+                                                    Fremont CA</a></li>
+                                                <li> <i class="icon-telephone-call-1" aria-hidden="true"></i> <a
+                                                        href="#">510-943-4301</a></li>
+                                                <li> <i class="icon-envelope" aria-hidden="true"></i> <a
+                                                        href="#">Info@bayhilldrivingschool.com</a></li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="footer-widget--about">
+                                            <ul class="list-unstyled footer-widget__info">
+                                                <li> <i class="icon-map-pin" aria-hidden="true"></i> <a href="#">97 E Brokaw Rd , ,San Jose CA</a></li>
+                                                <li> <i class="icon-telephone-call-1" aria-hidden="true"></i> <a
+                                                        href="#">408-384-4458</a></li>
+                                                <li> <i class="icon-envelope" aria-hidden="true"></i> <a
+                                                        href="#">Info@bayhilldrivingschool.com</a></li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="footer-widget--about">
+                                            <ul class="list-unstyled footer-widget__info">
+                                                <li> <i class="icon-map-pin" aria-hidden="true"></i> <a href="#">4457 Willow Rd, Pleasanton CA 94588</a></li>
+                                                <li> <i class="icon-telephone-call-1" aria-hidden="true"></i> <a
+                                                        href="#">925-464-2899</a></li>
+                                                <li> <i class="icon-envelope" aria-hidden="true"></i> <a
+                                                        href="#">Info@bayhilldrivingschool.com</a></li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h3 class="footertitle">Social Network</h3>
+                                        <div class="main-footer__inner-social">
+                                            <a href="https://facebook.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                            <a href="https://twitter.com/"><i class="icon-twitter" aria-hidden="true"></i></a>
+                                            <a href="https://pinterest.com/"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
+                                        
                             </div>
+                            
                         </div>
-                        <div class="col-md-6 col-xl-3">
-                            <h3 class="footertitle">Social Network</h3>
-                            <div class="main-footer__inner-social">
-                                <a href="https://facebook.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                                <a href="https://twitter.com/"><i class="icon-twitter" aria-hidden="true"></i></a>
-                                <a href="https://pinterest.com/"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -329,12 +372,13 @@
             <div class="main-footer__bottom">
                 <div class="container">
                     <div class="main-footer__bottom__inner d-lg-flex align-items-center justify-content-between">
-                        
+
                         <div class="d-flex gap-4  order-lg-2 mb-3 mb-lg-0">
                             <a href="#" class="text-dark">Terms & Conditions</a>
-                            <a href="#" class="text-dark">Privacy Policy</a>
                         </div>
-                        <p class="main-footer__copyright order-lg-1"> &copy; Copyright <span class="dynamic-year"></span> BayHill. All Rights Reserved. Designed and Developed by <a href="" class="fw-semibold text-primary">GOIGI.COM</a></p>
+                        <p class="main-footer__copyright order-lg-1"> &copy; Copyright <span
+                                class="dynamic-year"></span> BayHill. All Rights Reserved. Designed and Developed by <a
+                                href="" class="fw-semibold text-primary">GOIGI.COM</a></p>
                     </div>
                 </div>
             </div>
@@ -387,7 +431,18 @@
     <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        
+        const slots = [
+            { time: '09:00 - 10:30 am', status: 'available' },
+            { time: '10:30 - 12:00 pm', status: 'available' },
+            { time: '12:00 - 01:30 pm', status: 'available' },
+            { time: '01:30 - 03:00 pm', status: 'available' },
+            { time: '03:00 - 04:30 pm', status: 'unavailable' },
+            { time: '04:30 - 06:00 pm', status: 'available' },
+            { time: '06:00 - 07:30 pm', status: 'available' },
+            { time: '07:30 - 09:00 pm', status: 'available' },
+            { time: '09:00 - 10:30 pm', status: 'available' }
+        ];
+
         let selectedSlot = null;
 
         $(function() {
@@ -444,7 +499,8 @@
                         dayElement.click(() => {
                             selectedDate = date.toDateString();
                             $('#selected-date').text(`Selected Date: ${selectedDate}`);
-                           
+                            $('#calendar-container').hide();
+                            $('#slot-container').show();
                             renderSlots();
                         });
                     }
@@ -478,7 +534,10 @@
                 selectedSlot = time;
             }
 
-           
+            $('#back-to-calendar').click(function() {
+                $('#slot-container').hide();
+                $('#calendar-container').show();
+            });
 
             renderCalendar(today.getMonth(), today.getFullYear());
         });

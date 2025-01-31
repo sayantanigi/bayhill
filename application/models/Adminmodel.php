@@ -170,20 +170,20 @@ class Adminmodel extends CI_Model
 		}
 	}
 	function get_all_record($column = '', $table = '', $where = '', $orderby = '', $limit = ''){
-		$this->db->select($column); 
-		$this->db->from($table);
-		if($where != ''){
-		  $this->db->where($where);	
-		}
-       	if($limit != ''){
-		  $this->db->limit($limit);
-		}
-		if($orderby != ''){
-		  $this->db->order_by($orderby[0], $orderby[1]);
-		}
-		$query = $this->db->get();
-		$result = ($query->num_rows() > 0) ? $query->result():FALSE;
-		return $result;
+            $this->db->select($column); 
+            $this->db->from($table);
+            if($where != ''){
+              $this->db->where($where);	
+            }
+            if($limit != ''){
+              $this->db->limit($limit);
+            }
+            if($orderby != ''){
+              $this->db->order_by($orderby[0], $orderby[1]);
+            }
+            $query = $this->db->get();
+            $result = ($query->num_rows() > 0) ? $query->result():FALSE;
+            return $result;
 	}
 	function add($table = '', $data = ''){
 		if(empty($data)){

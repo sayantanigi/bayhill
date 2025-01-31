@@ -15,7 +15,7 @@ class Trainer extends CI_Controller {
             'page' => 'Trainer List',
             'subpage' => 'trainer',
         );
-        $data['trainer_list'] = $this->Adminmodel->get_all_record('*', 'users', '', array('id', 'DESC'), '');
+        $data['trainer_list'] = $this->Adminmodel->get_all_record('*', 'users', 'user_type = 2', array('id', 'DESC'), '');
         $this->load->view('admin/header', $data);
         $this->load->view('admin/sidebar');
         $this->load->view('admin/trainer/trainer_list');
@@ -66,13 +66,14 @@ class Trainer extends CI_Controller {
             
             $data = array(
                 'added_by' => 'admin',
-                'participant_code' => random_int(100000, 999999),
-                'user_type' => '1',
+                'unique_code' => random_int(100000, 999999),
+                'user_type' => '2',
                 'salutation' => strip_tags($this->input->post('salutation')),
-                'fname' => strip_tags($this->input->post('fname')),
-                'lname' => strip_tags($this->input->post('lname')),
+                'first_name' => strip_tags($this->input->post('fname')),
+                'last_name' => strip_tags($this->input->post('lname')),
                 'email' => strip_tags($this->input->post('email')),
                 'gender' => strip_tags($this->input->post('gender')),
+                'dob' => $this->input->post('dob'),
                 'phone' => strip_tags($this->input->post('phone')),
                 'address' => strip_tags($this->input->post('address')),
                 'latitude' => strip_tags($this->input->post('latitude')),
@@ -325,10 +326,11 @@ class Trainer extends CI_Controller {
                 }
             }
             $data = array(
-                'fname' => strip_tags($this->input->post('fname')),
-                'lname' => strip_tags($this->input->post('lname')),
+                'first_name' => strip_tags($this->input->post('fname')),
+                'last_name' => strip_tags($this->input->post('lname')),
                 'email' => strip_tags($this->input->post('email')),
                 'gender' => strip_tags($this->input->post('gender')),
+                'dob' => $this->input->post('dob'),
                 'phone' => strip_tags($this->input->post('phone')),
                 'address' => strip_tags($this->input->post('address')),
                 'latitude' => strip_tags($this->input->post('latitude')),
@@ -648,8 +650,5 @@ class Trainer extends CI_Controller {
     }
     function getWeekdayName($date) {
         return date('l', strtotime($date)); // Returns the full weekday name (e.g., "Monday")
-    }
-    public function delete_trainer() {
-        
     }
 }

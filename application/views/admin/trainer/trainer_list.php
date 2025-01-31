@@ -54,7 +54,7 @@ p strong{font-weight: 600 !important; color: black !important;}
                                             <?php foreach ($trainer_list as $key => $v): ?>
                                                 <tr>
                                                     <td><?= $key + 1 ?></td>
-                                                    <td><?= ucfirst(@$v->fname); ?> &nbsp; <?= ucfirst(@$v->lname); ?></td>
+                                                    <td><?= ucfirst(@$v->first_name); ?> &nbsp; <?= ucfirst(@$v->last_name); ?></td>
                                                     <td><?= @$v->email; ?></td>
                                                     <td><?= @$v->phone; ?></td>
                                                     <td><?= @$v->address; ?></td>
